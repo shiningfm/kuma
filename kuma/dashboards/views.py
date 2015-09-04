@@ -70,14 +70,8 @@ def revisions(request):
 
     if query_kwargs:
         revisions = revisions.filter(**query_kwargs)
-
-    # Only bother with this if we're actually going to get
-    # some revisions from it. Otherwise it's a pointless but
-    # potentially complex query.
     revisions = paginate(request, revisions, per_page=PAGE_SIZE)
-    total = revisions.count
-
-    context = {'revisions': revisions, 'page': page, 'total': total}
+    context = {'revisions': revisions, 'page': page}
 
     # Serve the response HTML conditionally upon reques type
     if request.is_ajax():
