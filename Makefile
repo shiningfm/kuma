@@ -17,7 +17,7 @@ browser-tests: on_host
 	pushd tests/ui ; ./node_modules/.bin/intern-runner config=intern-local d=developer.allizom.org b=firefox; popd
 
 clean:
-	find kuma -name '*.pyc' -exec rm {} \;
+	find . -name '*.pyc' -exec rm {} \;
 
 # On host: run coverage and display HTML
 # On VM: run coverage
