@@ -595,10 +595,7 @@ MINIFY_BUNDLES = {
             'css/zones.css',
             'css/diff.css',
 
-            'js/libs/prism/themes/prism.css',
-            'js/libs/prism/plugins/line-highlight/prism-line-highlight.css',
-            'js/libs/prism/plugins/ie8/prism-ie8.css',
-            'js/prism-mdn/plugins/line-numbering/prism-line-numbering.css',
+            'js/libs/prism/prism.css',
             'js/prism-mdn/components/prism-json.css',
             'css/wiki-syntax.css',
         ),
@@ -703,8 +700,6 @@ MINIFY_BUNDLES = {
         'syntax-prism': (
             'js/libs/prism/prism.js',
             'js/prism-mdn/components/prism-json.js',
-            'js/prism-mdn/plugins/line-numbering/prism-line-numbering.js',
-            'js/libs/prism/plugins/line-highlight/prism-line-highlight.js',
             'js/syntax-prism.js',
         ),
         'search-suggestions': (

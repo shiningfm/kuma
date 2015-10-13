@@ -177,13 +177,9 @@ class UrlArrayTests(TestCase):
     def test_js_debug(self, mock_mtime):
         mock_mtime.return_value = 300
         result = js_url_array('syntax-prism', True)
-        eq_(mock_mtime.call_count, 5)
+        eq_(mock_mtime.call_count, 3)
         expected = (
             '["/static/js/libs/prism/prism.js?build=300",'
             ' "/static/js/prism-mdn/components/prism-json.js?build=300",'
-            ' "/static/js/prism-mdn/plugins/line-numbering/'
-            'prism-line-numbering.js?build=300",'
-            ' "/static/js/libs/prism/plugins/line-highlight/'
-            'prism-line-highlight.js?build=300",'
             ' "/static/js/syntax-prism.js?build=300"]')
         eq_(result, expected)
